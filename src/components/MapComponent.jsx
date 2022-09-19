@@ -40,7 +40,7 @@ const MapComponent = ({data}) => {
 };
   return (
     <LoadScript
-    googleMapsApiKey="AIzaSyAQtP28DhAu5tb5W_qFyDwKtUaeynCzg_Y"
+    googleMapsApiKey=""
   >
     <GoogleMap
       mapContainerStyle={containerStyle}
