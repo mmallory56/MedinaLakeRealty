@@ -13,8 +13,9 @@ const Listing = ({data}) => {
       <LogoBar></LogoBar>
      
     <HeroListing></HeroListing>
+   
+    <MapComponent></MapComponent> 
     <SearchBar/>
-    <MapComponent></MapComponent>
     {data.allStrapiListing.nodes.map(item=>
       {
         return <LargeListingCard key={item.id} data={item}/>

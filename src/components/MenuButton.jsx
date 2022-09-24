@@ -3,8 +3,8 @@ import styled from "styled-components";
 const Box = styled.div`
   display: flex;
   position:fixed;
-  
-  left:20px;
+  top: 30px;
+  left:30px;
   width: 30px;
   align-Items: center;
   justify-content: center ;

@@ -27,7 +27,7 @@ const IndexPage = ({data}) => {
       <ListingSection data={data}></ListingSection>
       <ReviewSection></ReviewSection>
       <Footer></Footer>
-      <NavBar></NavBar>
+      <NavBar data={data}></NavBar>
       </main>
   )
 }
@@ -37,7 +37,7 @@ export const query = graphql`query HomePageQuery{
           url
         }
       }
-  allStrapiListing(filter: { publishedAt: { ne: null } }){
+  allStrapiListing(filter: { publishedAt: { ne: null } },limit:4){
    
     nodes {
    

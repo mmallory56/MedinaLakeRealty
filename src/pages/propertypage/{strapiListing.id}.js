@@ -1,30 +1,24 @@
 import React from 'react'
 import { graphql } from "gatsby"
-import { Data } from '@react-google-maps/api';
 import LogoBar from '../../components/LogoBar';
-import HeroListing from '../../components/HeroListing';
-import SearchBar from '../../components/SearchBar';
 import MapComponent from '../../components/MapComponent';
 import NavBar from '../../components/NavBar';
+import ListingPage from '../../components/ListingPage';
+import Carousel from '../../components/Carousel';
+import PropertyInfoBar from '../../components/PropertyInfoBar';
 
 export default function Component(props) {
   const data = props.data.allStrapiListing.nodes[0];
-    return <div>
+    return <>
       <LogoBar></LogoBar>
      
-     
-  
+     <Carousel data={data}></Carousel>
+    <PropertyInfoBar/>
      <MapComponent></MapComponent>
-      {data.Title}
-      {" "}
-      {data.ForSale?"For Sale":"Off Market"}
-      {" "}
-      {data.ShortDescription?data.ShortDescription:""}
-      {data.SalePrice}
-      {data.listingAgent}
-      {data.company}
+     <ListingPage data={data}></ListingPage>
+      
       <NavBar></NavBar>
-    </div>
+    </>
   }
 
   export const query = graphql`query($id:String) {
@@ -37,7 +31,7 @@ export default function Component(props) {
           localFile{
             childImageSharp {
               gatsbyImageData(
-                width: 900
+                width: 1400
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )

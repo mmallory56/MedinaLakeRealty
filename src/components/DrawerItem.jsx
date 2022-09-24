@@ -16,7 +16,7 @@ width:65%;
 `
 const DrawerItem = ({children,id=""}) => {
   return (
-    <Item to={`/Listing/${id}`}>
+    <Item to={`/${id}`}>
      
      {children} 
       </Item>

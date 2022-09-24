@@ -17,10 +17,11 @@ const LinkEdit = styled(Link)`
   width: 100%;
   height: auto;
 `
-const Image = styled.img`
-width:100%;
+const Image = styled(GatsbyImage)`
+width:auto;
 height:auto;
 border-radius: 20px;
+z-index: 0;
 `
 const Price = styled.div`
 font-family: 'Shadows Into Light Two', cursive;
@@ -79,17 +80,18 @@ overflow:hidden ;
 white-space: nowrap;
 `
 const LargeListingCard = ({data}) => {
-  const image = getImage(data.Images[0].localFile)
+  const image = getImage(data.Images?data.Images[0].localFile:"")
   console.log(data)
+  console.log(image)
 
   return (
    <Card>
   {/* //    <Image src={data.Images?`http://localhost:3000${data.Images[0].url}`:"../../../Listingimage.png"}/> */}
     
      
-    <Link to={`/propertypage/${data?data.id:""}`}> <GatsbyImage image={image} alt={data.Title} />
+    <Link to={`/propertypage/${data?data.id:""}`}> <Image image={image} alt={data.Title} />
     </Link>
-    <Price>{data?data.SalePrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' }):"$240,000"}</Price>
+    <Price>{data.SalePrice?data.SalePrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' }):"$240,000"}</Price>
     <Address> {data?data.address:""}</Address>
     <ListingAgent>{data?`${data.company}, ${data.listingAgent}`:"N/A"}</ListingAgent>
    </Card>

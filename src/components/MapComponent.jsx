@@ -32,7 +32,7 @@ const center = {
 };
 
 
-const MapComponent = ({data}) => {
+const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752}) => {
   const options = { closeBoxURL: '', enableEventPropagation: true };
 
   const onLoad = infoBox => {
@@ -50,8 +50,8 @@ const MapComponent = ({data}) => {
     >
       {/* <Marker position={{ lat: 29.5991112339752,
   lng: -98.93125807183542}} label={"Medina Lake Realty"}></Marker> */}
-  <Circle position={{ lat: 29.5991112339752,
-  lng: -98.93125807183542}} radius={2} />
+  <Circle position={{ lat: lat,
+  lng: lng}} radius={2} />
     <InfoBox
       onLoad={onLoad}
       options={options}

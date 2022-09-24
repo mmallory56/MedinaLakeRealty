@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import DrawerItem from "./DrawerItem";
 import MenuButton from "./MenuButton";
 import MenuDrawer from "./MenuDrawer";
+import { StaticQuery, graphql } from "gatsby"
+
 const header = {
   position:"fixed",
   display: "flex",
@@ -18,19 +20,43 @@ const header = {
 };
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  return <div style={header}>
+  
+  return <StaticQuery query={graphql`
+  query NavBarQuery {
+    allStrapiListing(filter: { publishedAt: { ne: null } }){
+    
+      nodes{
+        id
+        Title
+        SalePrice
+        type
+        }
+    
+    }
+  }
+`}
+render={data => (
+  <>
+  {console.log(data)}
     <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}></MenuButton>
     <MenuDrawer isOpen={isOpen}>
-      <DrawerItem id="waterfront">Water Front</DrawerItem>
-      <DrawerItem>Houses</DrawerItem>
-      <DrawerItem>Land</DrawerItem>
-      <DrawerItem>Buying?</DrawerItem>
-      <DrawerItem>Selling?</DrawerItem>
+      <DrawerItem id="">Home</DrawerItem>
+      <DrawerItem id="waterfront">Water Front </DrawerItem>
+      <DrawerItem id="Listing">Houses</DrawerItem>
+      <DrawerItem id="Listing">Land</DrawerItem>
+      <DrawerItem id="Listing">Buying?</DrawerItem>
+      <DrawerItem id="Listing">Selling?</DrawerItem>
       
     </MenuDrawer>
+    </>
+)}/>
+
+  
+ 
       
 
-  </div>;
+  
 };
+
 
 export default NavBar;

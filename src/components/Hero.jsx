@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import ButtonEmpty from './ButtonEmpty';
 import SolidButton from './SolidButton';
-
+import { Link } from "gatsby"
 const HeroItem = styled.div`
   display: flex;
   flex-direction: column;
@@ -180,7 +180,7 @@ const Hero = () => {
           Buying or Selling Property on Medina Lake?
           </QuestionHeader>
           <div>
-            <ButtonEmpty >Buying?</ButtonEmpty>
+            <ButtonEmpty ><Link to="/Listing">Buying?</Link></ButtonEmpty>
             <SolidButton style={{marginRight:"20px",marginLeft:"20px"}}>Selling?</SolidButton>
           </div>
           
