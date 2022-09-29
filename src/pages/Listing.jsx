@@ -32,7 +32,7 @@ export const query = graphql`query ListingPageQuery{
            url
          }
        }
-   allStrapiListing(filter: { publishedAt: { ne: null },ForSale: {ne:false} }){
+   allStrapiListing(filter: { ForSale: {ne:false} }){
     
      nodes {
     
@@ -57,14 +57,12 @@ export const query = graphql`query ListingPageQuery{
        ShortDescription
        LongDescription
        ForSale
-       SalePrice
-       Title
+       
+      
        LocationLatitude
        LocationLongitute
        type
-       createdAt
-       updatedAt
-       publishedAt
+      
       address
       listingAgent
       company

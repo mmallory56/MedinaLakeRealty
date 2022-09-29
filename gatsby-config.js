@@ -7,7 +7,7 @@ const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
    collectionTypes: [
-    {
+    { 
       singularName: 'listing',
       queryParams: {
         publicationState: process.env.GATSBY_IS_PREVIEW === 'true' ? 'preview' : 'live',
@@ -20,13 +20,16 @@ const strapiConfig = {
         },
       },
     },
+   "something",
+   "listing2",
+ 
   ],
   singleTypes: [],
 };
 
 module.exports = {
   siteMetadata: {
-    title: `medinalake`,
+    title: `medina lake realty`,
     siteUrl: `https://www.medinalakerealty.com`
   },
   plugins: [

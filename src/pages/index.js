@@ -37,7 +37,7 @@ export const query = graphql`query HomePageQuery{
           url
         }
       }
-  allStrapiListing(filter: { publishedAt: { ne: null } },limit:4){
+  allStrapiListing(filter: {  },limit:4){
    
     nodes {
    

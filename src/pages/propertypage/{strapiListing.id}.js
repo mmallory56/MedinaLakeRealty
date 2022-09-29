@@ -23,7 +23,7 @@ export default function Component(props) {
 
   export const query = graphql`query($id:String) {
     
-     allStrapiListing(filter: { publishedAt: { ne: null },id:{eq:$id} }){
+     allStrapiListing(filter: { id:{eq:$id} }){
       
        nodes {
       
@@ -53,9 +53,8 @@ export default function Component(props) {
          LocationLatitude
          LocationLongitute
          type
-         createdAt
-         updatedAt
-         publishedAt
+       
+         
         address
         listingAgent
         company

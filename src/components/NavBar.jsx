@@ -20,10 +20,10 @@ const header = {
 };
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return <StaticQuery query={graphql`
   query NavBarQuery {
-    allStrapiListing(filter: { publishedAt: { ne: null } }){
+    allStrapiListing(filter: {  }){
     
       nodes{
         id
