@@ -40,7 +40,7 @@ const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752,Markers=[{l
 };
   return (
     <LoadScript
-    googleMapsApiKey={apikey}
+    googleMapsApiKey={process.env.GoogleAPIKey.toString()}
   >
     <GoogleMap
       mapContainerStyle={containerStyle}
