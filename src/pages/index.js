@@ -25,7 +25,7 @@ const IndexPage = ({data}) => {
       
       <Hero></Hero>
       <ListingSection data={data}></ListingSection>
-      <ReviewSection></ReviewSection>
+      {/* <ReviewSection></ReviewSection> */}
       <Footer></Footer>
       <NavBar data={data}></NavBar>
       </main>

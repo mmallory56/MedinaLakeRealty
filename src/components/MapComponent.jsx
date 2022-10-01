@@ -32,15 +32,15 @@ const center = {
 };
 
 
-const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752}) => {
+const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752,Markers=[{lng:20,lat:20}]}) => {
   const options = { closeBoxURL: '', enableEventPropagation: true };
-
+  const apikey = process.env.GoogleAPIKey;
   const onLoad = infoBox => {
   console.log('infoBox: ', infoBox)
 };
   return (
     <LoadScript
-    googleMapsApiKey=""
+    googleMapsApiKey={apikey}
   >
     <GoogleMap
       mapContainerStyle={containerStyle}
@@ -48,9 +48,12 @@ const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752}) => {
       zoom={12}
 
     >
-      {/* <Marker position={{ lat: 29.5991112339752,
-  lng: -98.93125807183542}} label={"Medina Lake Realty"}></Marker> */}
-  <Circle position={{ lat: lat,
+      {Markers.map((Item)=>{
+        return <Marker postion={Item}></Marker>
+      })}
+      <Marker position={{ lat: 29.5991112339752,
+  lng: -98.93125807183542}} ></Marker> 
+  {/* <Circle position={{ lat: lat,
   lng: lng}} radius={2} />
     <InfoBox
       onLoad={onLoad}
@@ -66,8 +69,8 @@ const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752}) => {
         </div>
       </div>
       </InfoBoxContainer>
-     
-    </InfoBox>
+      */}
+    {/* </InfoBox> */}
       { /* Child components, such as markers, info windows, etc. */ }
       <></>
     </GoogleMap>

@@ -64,7 +64,7 @@ const Carousel = ({images=["",""],data}) => {
           {data.Images.map((item,index)=>{
           
             const image = getImage(item.localFile)
-            return <Slide index={index}><GatsbyImage image={image} alt={data.address} /></Slide>
+            return <Slide index={index}><GatsbyImage image={image} alt={data.address} style={{width:"100%",borderRadius:"20px"}}/></Slide>
           })} 
           {data.Images.map((item,index)=>{
             

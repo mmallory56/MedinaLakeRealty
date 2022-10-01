@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-
+import{Link }from "gatsby"
 const Bar = styled.div`
     width: 100%;
     height: 80px;
@@ -11,15 +11,34 @@ const Bar = styled.div`
     border-radius: .5rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
-const LogoBox = styled.div`
-    width:20%;
-    height: 100%;
-    background-color: white;
-    border-radius: .5rem;
+
+const Image = styled.img`
+margin-top:30px;
+width:220px;
+height:220px;
+`
+const Item = styled.div`
+  width:auto;
+  padding-right:40px;
+  padding-left: 40px;
+  color:white;
 `
 const LogoBar = () => {
   return (
-    <Bar><LogoBox></LogoBox></Bar>
+    <Bar>
+      <Link to={"/"}>
+        <Image src="./medinalakeLogo.png"/>
+      </Link>
+      <Link to={"/Listing"}>
+        <Item>Listings</Item>
+      </Link>
+      <Link to={"/Listing"}>
+        <Item>Buying?</Item>
+      </Link>
+      <Link to={"/Selling"}>
+        <Item>Selling?</Item>
+      </Link>
+    </Bar>
   )
 }
 

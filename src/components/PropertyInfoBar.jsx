@@ -90,7 +90,7 @@ const ColorButton = styled.div`
 
     }
 `
-function PropertyInfoBar() {
+function PropertyInfoBar({data}) {
   return (
     <Container>
         <TopRow>

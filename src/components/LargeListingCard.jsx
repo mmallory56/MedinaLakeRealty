@@ -18,9 +18,9 @@ const LinkEdit = styled(Link)`
   height: auto;
 `
 const Image = styled(GatsbyImage)`
-width:auto;
 height:auto;
 border-radius: 20px;
+width:100%;
 z-index: 0;
 `
 const Price = styled.div`

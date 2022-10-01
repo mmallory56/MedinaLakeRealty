@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
 const FooterContainer = styled.div`
@@ -5,13 +6,13 @@ const FooterContainer = styled.div`
   flex-direction: row;
 
   font-size: 1.5em;
-  padding-top:200px;
+  padding-top:90px;
   background-image: url("./footerBackground.svg");
   
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 30%;
   @media screen and (max-width: 1200px) {
      font-size: 1.2em;
 }
@@ -39,21 +40,30 @@ display: flex;
 align-items: center;
 flex-direction: column;
     width:33%;
-    height:700px;
-    padding-top: 390px;
+    height:500px;
+    padding-top: 600px;
     
     color:#ffff;
 `;
 const Item = styled.div`
-margin-top:30px;
-
+margin-top:90px;
+color:white;
+font-size: xx-large;
+text-decoration-line: none;
+-moz-text-decoration-line:none;
+text-decoration: none !important;
 `;
 const Footer = () => {
   return (
     <FooterContainer>
         <Section>
+          <Link to={"/About"}>
             <Item>About</Item>
-            <Item>Listings</Item>
+            </Link>
+            <Link to={"/Listing"}>
+             <Item>Listings</Item> 
+            </Link>
+            
             <Item>Item</Item>
           
             
