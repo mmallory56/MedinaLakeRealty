@@ -27,7 +27,7 @@ const LogoBar = () => {
   return (
     <Bar>
       <Link to={"/"}>
-        <Image src="./medinalakeLogo.png"/>
+        <Image src="./MedinalakeLogo.png"/>
       </Link>
       <Link to={"/Listing"}>
         <Item>Listings</Item>
