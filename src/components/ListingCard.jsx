@@ -13,8 +13,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 4px;
 `
 const Image = styled(GatsbyImage)`
-width:auto;
-height:auto;
+width:100%;
+height:100%;
 border-radius: 20px;
 z-index: 0;
 `
