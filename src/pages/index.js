@@ -7,6 +7,7 @@ import LogoBar from "../components/LogoBar"
 import NavBar from "../components/NavBar"
 import ReviewSection from "../components/ReviewSection"
 import { graphql } from "gatsby"
+import { SEO } from "../components/seo"
 
 const mainStyle = {
   
@@ -17,7 +18,8 @@ const mainStyle = {
 }
 
 // markup
-const IndexPage = ({data}) => {
+const IndexPage = ({data,title, description, pathname, children}) => {
+
   return (
     <main style={mainStyle}>
 
@@ -69,4 +71,9 @@ export const query = graphql`query HomePageQuery{
 
 }`
 export default IndexPage
+
+
+export const Head = () => (
+  <SEO />
+)
 

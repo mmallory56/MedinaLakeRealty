@@ -29,7 +29,8 @@ const strapiConfig = {
 
 module.exports = {
   siteMetadata: {
-    title: `medina lake realty`,
+    title: `Medina Lake Realty`,
+    description: `Medina Lake Real estate company specializing in medina lake, lakehills and bandera texas`,
     siteUrl: `https://www.medinalakerealty.com`
   },
   plugins: [

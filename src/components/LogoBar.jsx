@@ -29,7 +29,7 @@ const LogoBar = () => {
   return (
     <Bar>
       <Link to={"/"}>
-        <StaticImage src="../images/MedinalakeLogo2.png" alt={"Medina Lake Realty Logo"}/>
+        <StaticImage src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
       </Link>
       <Link to={"/Listing"}>
         <Item>Listings</Item>
