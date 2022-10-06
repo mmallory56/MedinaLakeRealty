@@ -37,7 +37,7 @@ const NavBar = () => {
 `}
 render={data => (
   <>
-  {console.log(data)}
+ 
     <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}></MenuButton>
     <MenuDrawer isOpen={isOpen}>
       <DrawerItem id="">Home</DrawerItem>

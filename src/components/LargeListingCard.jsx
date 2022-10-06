@@ -81,8 +81,8 @@ white-space: nowrap;
 `
 const LargeListingCard = ({data}) => {
   const image = getImage(data.Images?data.Images[0].localFile:"")
-  console.log(data)
-  console.log(image)
+ // console.log(data)
+  //console.log(image)
 
   return (
    <Card>

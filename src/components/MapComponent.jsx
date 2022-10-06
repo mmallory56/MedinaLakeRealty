@@ -40,7 +40,7 @@ const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752,Markers=[{l
 };
   return (
     <LoadScript
-    googleMapsApiKey={process.env.GoogleAPIKey.toString()}
+    googleMapsApiKey={process.env.GoogleAPIKey}
   >
     <GoogleMap
       mapContainerStyle={containerStyle}
@@ -48,8 +48,8 @@ const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752,Markers=[{l
       zoom={12}
 
     >
-      {Markers.map((Item)=>{
-        return <Marker postion={Item}></Marker>
+      {Markers.map((Item,index)=>{
+        return <Marker key={index} postion={Item}></Marker>
       })}
       <Marker position={{ lat: 29.5991112339752,
   lng: -98.93125807183542}} ></Marker> 
