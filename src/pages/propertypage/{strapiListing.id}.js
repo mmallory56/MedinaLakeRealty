@@ -6,6 +6,7 @@ import NavBar from '../../components/NavBar';
 import ListingPage from '../../components/ListingPage';
 import Carousel from '../../components/Carousel';
 import PropertyInfoBar from '../../components/PropertyInfoBar';
+import Footer from '../../components/Footer';
 
 
 export default function Component(props) {
@@ -19,7 +20,7 @@ export default function Component(props) {
     <PropertyInfoBar data={data}/>
      <MapComponent lng={data.LocationLongitute} ></MapComponent>
      <ListingPage data={data}></ListingPage>
-     
+     <Footer></Footer>
       <NavBar></NavBar>
     
     </>

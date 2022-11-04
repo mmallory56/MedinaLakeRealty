@@ -7,7 +7,7 @@ const FooterContainer = styled.div`
 
   font-size: 1.5em;
   padding-top:90px;
-  background-image: url("./footerBackground.svg");
+  background-image: url("/footerBackground.svg");
   
   background-repeat: no-repeat;
   background-size: cover;

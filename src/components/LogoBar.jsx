@@ -17,18 +17,27 @@ const Bar = styled.div`
 
 const Item = styled(Link)`
   width:auto;
-  padding-right:40px;
-  padding-left: 40px;
+  margin: auto;
   color:white;
   text-decoration: none;
   font-size: larger;
+  @media screen and (max-width: 400px) {
   
+    font-size: smaller;
+  
+  
+}
 `
+const logoStyle={
+  boxShadow:"2px 2px 5px black",
+  borderRadius:"9px",
+  marginLeft:"10px"
+}
 const LogoBar = () => {
   return (
     <Bar>
-      <Link to={"/"}>
-        <StaticImage src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
+      <Link to={"/"} >
+        <StaticImage style={logoStyle} src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
       </Link>
       
         <Item to={"/Listing"}>Listings</Item>

@@ -9,7 +9,7 @@ flex-direction: column;
 margin:0px;
 margin-top:20px;
 padding:20px;
-    width:94vw;
+    width:auto;
     height: 500px;
 border-radius: 20px;
 background: #F8F7F7;
