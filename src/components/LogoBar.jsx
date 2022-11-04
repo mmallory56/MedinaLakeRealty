@@ -39,7 +39,7 @@ const logoStyle={
 const LogoBar = () => {
   return (
     <Bar>
-      <Link to={"/"} >
+      <Link to={"/"} href="/">
         <StaticImage style={logoStyle} src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
       </Link>
       

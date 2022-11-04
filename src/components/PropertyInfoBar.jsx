@@ -122,7 +122,7 @@ function PropertyInfoBar({data}) {
         <ButtonBox>
              <OutlineButton alt="Call Now ">
                 Call Now 
-                <a href="tel:8306123709"> (830)-688-3709</a>
+                <a href="tel:8306123709"> (830)-612-3709</a>
              </OutlineButton>
         <ColorButton onClick={()=>setModalVisible(true)}>
         Message

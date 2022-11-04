@@ -3,13 +3,14 @@ import styled from "styled-components";
 import ButtonEmpty from './ButtonEmpty';
 import SolidButton from './SolidButton';
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 const HeroItem = styled.div`
   display: flex;
   flex-direction: column;
  
   font-size: 1.5em;
   padding-top:100px;
-  background-image: url("./herogroup.svg");
+  background-image: url("/herogroup.svg");
   
   background-repeat: no-repeat;
   background-size: 100%;
@@ -56,41 +57,48 @@ const BottomSection=styled.div`
   text-align: left;
   width: 40%;
   height:25vw;
-  @media screen and (max-width: 1400px) {
+  
+  @media screen and (min-width: 350px) {
+    font-size:.7em;
+    padding-left:20px;
+    margin-top:25px;
+    padding-right: 0px;
+    width: 58%;
+    
+}
+  @media screen and (min-width: 1200px) {
      font-size: 1.4em;
      margin-top:90px;
+     margin-right:140px;
      width: 43%;
+     padding-left:150px;
 }
   @media screen and (max-width: 1200px) {
-     font-size: 1.2em;
+     font-size: 1.4em;
      margin-top:30px;
+     margin-right:60px;
      width: 40%;
 }
   @media screen and (max-width: 900px) {
      font-size: 1.1em;
      padding-left:50px;
     margin-top:20px;
+    padding-left:100px;
     width: 40%;
 }
   @media screen and (max-width: 600px) {
      font-size: .9em;
-     padding-left:50px;
-     width: 40%;
+     padding-left:30px;
+     width: 45%;
      margin-top:30px;
 }
-  @media screen and (max-width: 400px) {
-    font-size:.7em;
-    padding-left:20px;
-    margin-top:25px;
-    padding-right: 0px;
-    width: 55%;
-}
-@media screen and (max-width: 300px) {
+  
+@media screen and (max-width: 350px) {
   font-size:.4em;
   padding-left:10px;
   padding-right: 0px;
   margin-top:10px;
-  width: 55%;
+  width: 60%;
 }
 //background-color: lightcoral;
 `
@@ -128,9 +136,9 @@ margin-right:50px;
 color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 @media screen and (max-width: 600px) {
-    margin-right: 40px;
+    margin-right: 20px;
 }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     margin-right: 30px;
    // margin-left: 20px;
 }
@@ -153,8 +161,8 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 @media screen and (max-width: 600px) {
     margin-right: 40px;
 }
-  @media screen and (max-width: 400px) {
-    margin-right: 30px;
+  @media screen and (max-width: 450px) {
+    margin-right: 20px;
    // margin-left: 20px;
 }
 @media screen and (max-width: 300px) {
@@ -167,7 +175,9 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 const Hero = () => {
   return (
       
-          <HeroItem>
+          
+          <HeroItem src="../images/herogroup.svg" alt="Medina Lake Realty Logo">
+         
           <TopSection>
              <Header>Medina Lake Realty</Header>
           <HeaderFoot>Experience. Trust. Results. </HeaderFoot>

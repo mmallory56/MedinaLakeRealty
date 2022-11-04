@@ -7,7 +7,7 @@ position: static;
 padding: .4rem .4rem;
 box-sizing: border-box;
 background: transparent;
-
+margin-top: 10px;
 background: #C2DFDA;
 box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.83);
 border-radius: 5px;

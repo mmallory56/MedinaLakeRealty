@@ -75,14 +75,12 @@ width: max(50px,300px);
   `
   const Message = styled.textarea`
   background: #ecf0f3;
-  padding: 20px;
-  padding-left: 20px;
+ padding:20px;
   height: 80px;
-  width:90%;
+  width:calc(100% - 40px);
   font-size: 14px;
   border-radius: 20px;
-  padding-left:30px;
-  padding-right:20px;
+  
   margin-top:10px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
   
