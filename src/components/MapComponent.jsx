@@ -24,7 +24,7 @@ const MapComponent = ({lng= -98.93125807183542, lat=29.5991112339752,markers=[{l
  
   return (
     <LoadScript
-    googleMapsApiKey={process.env.GoogleAPIKey}
+    googleMapsApiKey={"AIzaSyAQtP28DhAu5tb5W_qFyDwKtUaeynCzg_Y"}
   >
     <GoogleMap
       mapContainerStyle={containerStyle}
