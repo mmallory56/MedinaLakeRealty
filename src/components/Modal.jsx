@@ -21,11 +21,19 @@ position: fixed;
 top:50%;
 right:50%;
 background-color:  #fefeffea;
-height:max(70vh,500px);
-width: max(50vw,200px);
+height:max(80vh,500px);
+width: max(80vw,400px);
 border-radius: 10px;
 transform: translate(50%,-50%);
 color: black;
+@media screen and (min-width: 900px) {
+  height:max(80vh,500px);
+width: max(50vw,200px);
+}
+@media screen and (max-width: 400px) {
+  height:max(90vh,500px);
+width: max(90vw,200px);
+}
 `
 const Button = styled.div`
 margin-top: 50px;
