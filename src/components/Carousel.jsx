@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import {AiOutlineLeft,AiOutlineRight} from "react-icons/ai"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -64,13 +64,13 @@ const Carousel = ({images=["",""],data}) => {
           {data.Images.map((item,index)=>{
           
             const image = getImage(item.localFile)
-            return <Slide index={index}><GatsbyImage image={image} alt={data.address} style={{width:"100%",borderRadius:"20px"}}/></Slide>
+            return <Slide key={index} index={index}><GatsbyImage image={image} alt={data.address} style={{width:"100%",borderRadius:"20px"}}/></Slide>
           })} 
           {data.Images.map((item,index)=>{
             
          
 
-            return <Dot style={{position:"absolute"}}index={index} disabled={false}/>
+            return <Dot key={index}  style={{position:"absolute"}}index={index} disabled={false}/>
           })}
         </Slider>
        

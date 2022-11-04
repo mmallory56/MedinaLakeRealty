@@ -13,10 +13,7 @@ margin-top:25px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 4px;
 `
-const LinkEdit = styled(Link)`
-  width: 100%;
-  height: auto;
-`
+
 const Image = styled(GatsbyImage)`
 height:auto;
 border-radius: 20px;
@@ -88,7 +85,7 @@ const LargeListingCard = ({data}) => {
    <Card>
   {/* //    <Image src={data.Images?`http://localhost:3000${data.Images[0].url}`:"../../../Listingimage.png"}/> */}
     
-     
+     {console.log(data.id)}
     <Link to={`/propertypage/${data?data.id:""}`}> <Image image={image} alt={data.Title} />
     </Link>
     <Price>{data.SalePrice?data.SalePrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' }):"$240,000"}</Price>

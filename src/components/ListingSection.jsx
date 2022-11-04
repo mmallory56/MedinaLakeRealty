@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import ListingCard from './ListingCard';
-import { graphql } from "gatsby"
+
 const Container = styled.div`
     display:flex;
    flex-direction: column;

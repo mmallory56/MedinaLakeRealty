@@ -21,35 +21,19 @@ const header = {
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  return <StaticQuery query={graphql`
-  query NavBarQuery {
-    allStrapiListing(filter: {  }){
-    
-      nodes{
-        id
-        Title
-        SalePrice
-        type
-        }
-    
-    }
-  }
-`}
-render={data => (
-  <>
+  return <>
  
-    <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}></MenuButton>
-    <MenuDrawer isOpen={isOpen}>
-      <DrawerItem id="">Home</DrawerItem>
-      <DrawerItem id="waterfront">Water Front </DrawerItem>
-      <DrawerItem id="Listing">Houses</DrawerItem>
-      <DrawerItem id="Listing">Land</DrawerItem>
-      <DrawerItem id="Listing">Buying?</DrawerItem>
-      <DrawerItem id="Listing">Selling?</DrawerItem>
-      
-    </MenuDrawer>
-    </>
-)}/>
+  <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}></MenuButton>
+  <MenuDrawer isOpen={isOpen}>
+    <DrawerItem id="">Home</DrawerItem>
+    <DrawerItem id="waterfront">Water Front </DrawerItem>
+    <DrawerItem id="Listing">Houses</DrawerItem>
+    <DrawerItem id="Listing">Land</DrawerItem>
+    <DrawerItem id="Listing">Buying?</DrawerItem>
+    <DrawerItem id="Listing">Selling?</DrawerItem>
+    
+  </MenuDrawer>
+  </>
 
   
  

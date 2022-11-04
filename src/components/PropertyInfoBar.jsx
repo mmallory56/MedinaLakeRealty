@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from "styled-components";
-import ButtonEmpty from './ButtonEmpty';
+
+import ContactForm from './ContactForm';
+import { Modal } from './Modal';
 
 const Container = styled.div`
 display:flex;
@@ -64,9 +66,9 @@ const Address = styled.div`
     font-weight: bold;
 `
 const OutlineButton = styled.div`
-    background-color: transparent;
+    background-color: #e0e0e09f;
     color: black;
-    border-color: black;
+    border-color: #ffffff53;
     border-width: 1px;
     border-style: solid;
     border-radius: 10px;
@@ -74,8 +76,15 @@ const OutlineButton = styled.div`
     padding-top:5px;
     padding-bottom:5px;
     margin-left:10px;
-    &hover{
+    box-shadow: 2px 2px 3px #0000007b;
+    & a{
+        text-decoration: none;
+        color: black;
 
+    }
+    &:hover{
+        transition: all .3s ease-in-out;
+        box-shadow: none;
     }
 `
 const ColorButton = styled.div`
@@ -86,34 +95,40 @@ const ColorButton = styled.div`
     padding-top:5px;
     padding-bottom:5px;
     margin-left:10px;
-    &hover{
-
+    box-shadow: 3px 3px 3px #0000007b;
+    &:hover{
+        transition: all .3s ease-in-out;
+        box-shadow: none;
     }
 `
 function PropertyInfoBar({data}) {
+    const [modalVisible,setModalVisible] = useState(false)
   return (
     <Container>
         <TopRow>
         <Price>
-            $249,000
+            {data? data.SalePrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' }):"N/A"}
+            
         </Price>
         <BedRoomsBaths>
-            1 BD | 1 BTH | 1200 sqft
+            {data?data.Beds:""} BD | {data?data.Baths:""} BTH | 1200 sqft
         </BedRoomsBaths>
         </TopRow>
         <CenterRow>
        <Address>
-       792 Alamo Beach Rd, Pipe Creek, Tx 78062
+       {data.address}
        </Address>
         </CenterRow>
         <ButtonBox>
-             <OutlineButton>
-                Call Now
+             <OutlineButton alt="Call Now ">
+                Call Now 
+                <a href="tel:8306123709"> (830)-688-3709</a>
              </OutlineButton>
-        <ColorButton>
+        <ColorButton onClick={()=>setModalVisible(true)}>
         Message
         </ColorButton>
         </ButtonBox>
+        <Modal setVisible={setModalVisible} Visible={modalVisible}><ContactForm StartMessage={`I'm interested in ${data.address}`}></ContactForm></Modal>
     </Container>
   )
 }

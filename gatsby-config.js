@@ -20,9 +20,7 @@ const strapiConfig = {
         },
       },
     },
-   "something",
-   "listing2",
- 
+
   ],
   singleTypes: [],
 };

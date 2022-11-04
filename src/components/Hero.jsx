@@ -181,7 +181,7 @@ const Hero = () => {
           </QuestionHeader>
           <div>
             <ButtonEmpty ><Link to="/Listing">Buying?</Link></ButtonEmpty>
-            <SolidButton style={{marginRight:"20px",marginLeft:"20px"}}>Selling?</SolidButton>
+            <SolidButton style={{marginRight:"20px",marginLeft:"20px"}}><Link to="/Listing">Selling?</Link></SolidButton>
           </div>
           
          </BottomSection>

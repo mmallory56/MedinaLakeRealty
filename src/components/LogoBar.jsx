@@ -14,16 +14,15 @@ const Bar = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-const Image = styled(StaticImage)`
-margin-top:30px;
-width:220px;
-height:220px;
-`
-const Item = styled.div`
+
+const Item = styled(Link)`
   width:auto;
   padding-right:40px;
   padding-left: 40px;
   color:white;
+  text-decoration: none;
+  font-size: larger;
+  
 `
 const LogoBar = () => {
   return (
@@ -31,15 +30,15 @@ const LogoBar = () => {
       <Link to={"/"}>
         <StaticImage src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
       </Link>
-      <Link to={"/Listing"}>
-        <Item>Listings</Item>
-      </Link>
-      <Link to={"/Listing"}>
-        <Item>Buying?</Item>
-      </Link>
-      <Link to={"/Selling"}>
-        <Item>Selling?</Item>
-      </Link>
+      
+        <Item to={"/Listing"}>Listings</Item>
+      
+      
+        <Item to={"/Buying"}>Buying?</Item>
+      
+  
+        <Item to={"/Selling"}>Selling?</Item>
+     
     </Bar>
   )
 }

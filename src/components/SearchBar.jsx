@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.form`
 text-align: left;
 display: flex;
 align-items: center;
@@ -24,9 +24,12 @@ padding:10px;
 border-radius: 39px;
 `
 
-const SearchBar = () => {
+const SearchBar = ({onChange,value}) => {
+  const  handleSubmit = e => {
+    e.preventDefault()
+  }
   return (
-    <Container><Input type="search" placeholder='search'></Input></Container>
+    <Container onSubmit={handleSubmit}><Input type="search" placeholder='search' onChange={onChange} value={value}></Input></Container>
   )
 }
 

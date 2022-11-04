@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link } from 'gatsby';
 const Card = styled.div`
 display:flex;
 flex-direction: column;
@@ -60,13 +61,13 @@ const ListingCard = ({data}) => {
   console.log(image)
 
   return (
-  <Card>
+  <Link to={`/propertypage/${data.id}`}><Card>
   {/* //    <Image src={data.Images?`http://localhost:3000${data.Images[0].url}`:"../../../Listingimage.png"}/> */}
      <Image image={image} alt={data.address} />
     <Price>{data.SalePrice?data.SalePrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' }):"$240,000"}</Price>
     <Address> {data?data.address:""}</Address>
     
-   </Card>
+   </Card></Link>
   )
 }
 

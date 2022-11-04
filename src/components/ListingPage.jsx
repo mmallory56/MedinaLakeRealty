@@ -1,13 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Image = styled(GatsbyImage)`
-width:auto;
-height:auto;
-border-radius: 20px;
-z-index: 0;
-`
+
+
 const Container = styled.div`
 display:flex;
 flex-direction: column;

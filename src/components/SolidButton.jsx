@@ -19,8 +19,17 @@ font-weight: 400;
 color: #000000;
 
 text-shadow: 2px 1px 2px rgba(80, 80, 80, 0.99);
-@media screen and (max-width: 600px) {
-     font-size: .9em;
+& a{
+  color:rgba(67, 67, 67, 0.91);
+  text-decoration: none;
+  
+  font-weight: bold;
+}
+&:hover{
+  box-shadow: none;
+}
+@media screen and (min-width: 600px) {
+     font-size: 1.2em;
   
 }
   @media screen and (max-width: 400px) {
