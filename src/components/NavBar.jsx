@@ -26,9 +26,9 @@ const NavBar = () => {
   <MenuButton isOpen={isOpen} setIsOpen={setIsOpen}></MenuButton>
   <MenuDrawer isOpen={isOpen}>
     <DrawerItem id="">Home</DrawerItem>
-    <DrawerItem id="waterfront">Water Front </DrawerItem>
-    <DrawerItem id="Listing">Houses</DrawerItem>
-    <DrawerItem id="Listing">Land</DrawerItem>
+    <DrawerItem id="Listing" search="Waterfront">Water Front </DrawerItem>
+    <DrawerItem id="Listing" search="Residential">Houses</DrawerItem>
+    <DrawerItem id="Listing" search="Land">Land</DrawerItem>
     <DrawerItem id="Listing">Buying?</DrawerItem>
     <DrawerItem id="Listing">Selling?</DrawerItem>
     

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import styled from "styled-components";
 
 const Container = styled.form`
@@ -25,6 +26,9 @@ border-radius: 39px;
 `
 
 const SearchBar = ({onChange,value}) => {
+  useEffect(()=>{
+
+  },[value])
   const  handleSubmit = e => {
     e.preventDefault()
   }

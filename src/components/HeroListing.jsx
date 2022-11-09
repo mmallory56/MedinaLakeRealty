@@ -28,11 +28,11 @@ background-color: #8b8b8b94;
 color: white;
 text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.9);
 `
-const HeroListing = ({text="Water Front Properties For Sale"}) => {
+const HeroListing = ({text="Water Front Properties For Sale",title}) => {
   return (
     <Background>
         <Box>
-        {text}
+        {(title?title:"") +" Properties For Sale"}
         </Box>
         </Background>
   )

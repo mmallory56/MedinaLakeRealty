@@ -5,21 +5,13 @@ import LargeListingCard from "./LargeListingCard";
 import SearchBar from "./SearchBar";
 
 
-export const ListingsToSearch = ({data}) => {
-const [search, setSearch]= useState([]);
-const [searchQuery,setSearchQuery]=useState("")
+export const ListingsToSearch = ({data,startSearch}) => {
+const [search, setSearch]= useState();
+const [searchQuery,setSearchQuery]=useState(startSearch)
 const [searchResult, setSearchResult]=useState(data.nodes);
-useEffect(() => {
-  rebuildIndex();
 
-  return () => {
-    
-  }
-},[])
-
-   const rebuildIndex = () => {
+const rebuildIndex = () => {
         const  Listing  = data.nodes
-        console.log(Listing);
         const dataToSearch = new JsSearch.Search("address")
         /**
          * defines an indexing strategy for the data
@@ -41,15 +33,37 @@ useEffect(() => {
         dataToSearch.addIndex("Title") // sets the index attribute for the data
         dataToSearch.addIndex("address") // sets the index attribute for the data
         dataToSearch.addIndex("LongDescription");
+        dataToSearch.addIndex("type")
         dataToSearch.addDocuments(Listing) // adds the data to be searched
         
             setSearch(dataToSearch);
             
       }
+useEffect(() => {
+  rebuildIndex();
+ 
+  
+  if(search){
+    setSearchQuery(startSearch)
+    setSearchResult(search.search(startSearch))
+  }
+  
+  
+
+  return () => {
+    
+  }
+},[startSearch])
+
+   
      const searchData = e => {
-        const queryResult = search.search(e.target.value)
-        setSearchQuery(e.target.value);
-        if(e.target.value==="")
+      pulldata(e.target.value)
+       
+      }
+      const pulldata = searchValue=>{
+        const queryResult = search.search(searchValue)
+        setSearchQuery(searchValue);
+        if(searchValue==="")
         setSearchResult(data.nodes);
         else
         setSearchResult(queryResult);

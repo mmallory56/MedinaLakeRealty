@@ -14,9 +14,9 @@ width:65%;
   text-decoration: underline;
 }
 `
-const DrawerItem = ({children,id=""}) => {
+const DrawerItem = ({children,id="",search}) => {
   return (
-    <Item to={`/${id}`}>
+    <Item to={`/${id}`}  search={search} state={{search:search}}>
      
      {children} 
       </Item>
