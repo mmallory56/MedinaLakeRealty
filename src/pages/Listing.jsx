@@ -20,7 +20,7 @@ setSearch(location.state.search)
      
     <HeroListing title={search}></HeroListing>
   
-    <ListingsToSearch data={data.allStrapiListing} startSearch={location.state.search?location.state.search:""}></ListingsToSearch>
+    <ListingsToSearch data={data.allStrapiListing} startSearch={search}></ListingsToSearch>
     
       <Footer></Footer>
     <NavBar></NavBar>
