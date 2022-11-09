@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import { ListingsToSearch } from '../components/ListingsToSearch'
 import { useEffect } from 'react'
 const Listing = ({data,location}) => {
-  const [search ,setSearch ]=useState(location.state.search);
+  const [search ,setSearch ]=useState(location?location.state.search:"");
   console.log(data)
 useEffect(()=>{
 setSearch(location.state.search)
