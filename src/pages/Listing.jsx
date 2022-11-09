@@ -9,11 +9,11 @@ import { useEffect } from 'react'
 const Listing = ({data,location}) => {
  
   const [search ,setSearch ]=useState("");
-  console.log(data)
+  
 useEffect(()=>{
 setSearch(location.state.search)
 },[location])
-  console.log(location)
+  
   return (
     <div>
       <LogoBar></LogoBar>

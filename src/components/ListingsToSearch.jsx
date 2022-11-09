@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar";
 
 export const ListingsToSearch = ({data,startSearch}) => {
 const [search, setSearch]= useState();
-const [searchQuery,setSearchQuery]=useState(startSearch)
+const [searchQuery,setSearchQuery]=useState()
 const [searchResult, setSearchResult]=useState(data.nodes);
 
 const rebuildIndex = () => {
@@ -44,11 +44,14 @@ useEffect(() => {
  
   
   if(search){
-    if(startSearch!=""){
+    if(startSearch!==""){
        setSearchQuery(startSearch)
     setSearchResult(search.search(startSearch))
     }
-   else setSearchResult(data.nodes)
+   else {
+    setSearchResult(data.nodes)
+    setSearchQuery("")
+   }
   }
   
   

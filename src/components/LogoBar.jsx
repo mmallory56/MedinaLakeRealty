@@ -63,7 +63,7 @@ const LogoBar = () => {
         <StaticImage style={logoStyle} src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
       </Link>
       
-        <Item to={"/Listing"}>Listings</Item>
+        <Item to={"/Listing"} state={{search:""}}>Listings</Item>
       
       
         <Item to={"/Buying"}>Buying</Item>
