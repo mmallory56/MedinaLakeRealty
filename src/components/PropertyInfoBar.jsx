@@ -103,6 +103,7 @@ const ColorButton = styled.div`
 `
 function PropertyInfoBar({data}) {
     const [modalVisible,setModalVisible] = useState(false)
+    console.log(data)
   return (
     <Container>
         <TopRow>
@@ -111,7 +112,7 @@ function PropertyInfoBar({data}) {
             
         </Price>
         <BedRoomsBaths>
-            {data?data.Beds:""} BD | {data?data.Baths:""} BTH | 1200 sqft
+            {data?data.Beds:""} BD | {data?data.Baths:""} BTH | {data?data.SquareFootage:""} sqft
         </BedRoomsBaths>
         </TopRow>
         <CenterRow>

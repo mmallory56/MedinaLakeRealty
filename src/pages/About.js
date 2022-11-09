@@ -7,9 +7,6 @@ const About = () => {
   return (
     <> 
      <LogoBar></LogoBar>
-      
-      
-   
       <Footer></Footer>
       <NavBar></NavBar>
     </>

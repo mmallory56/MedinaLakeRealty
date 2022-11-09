@@ -58,7 +58,7 @@ export default function Component(props) {
          LocationLatitude
          LocationLongitute
          type
-       
+         SquareFootage
          
         address
         listingAgent

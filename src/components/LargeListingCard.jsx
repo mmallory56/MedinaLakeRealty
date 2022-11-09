@@ -85,7 +85,7 @@ const LargeListingCard = ({data}) => {
    <Card>
   {/* //    <Image src={data.Images?`http://localhost:3000${data.Images[0].url}`:"../../../Listingimage.png"}/> */}
     
-     {console.log(data.id)}
+     
     <Link to={`/propertypage/${data?data.id:""}`}> <Image image={image} alt={data.Title} />
     </Link>
     <Price>{data.SalePrice?data.SalePrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' }):"$240,000"}</Price>

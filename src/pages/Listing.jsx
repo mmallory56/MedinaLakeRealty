@@ -2,17 +2,13 @@ import React, { useState } from 'react'
 import HeroListing from '../components/HeroListing'
 import LogoBar from '../components/LogoBar'
 import NavBar from "../components/NavBar"
-import SearchBar from '../components/SearchBar'
 import { graphql } from "gatsby"
-
-import LargeListingCard from '../components/LargeListingCard'
 import Footer from '../components/Footer'
-import MapComponent from '../components/MapComponent'
-import Search from '../components/SearchContainer'
 import { ListingsToSearch } from '../components/ListingsToSearch'
 import { useEffect } from 'react'
 const Listing = ({data,location}) => {
   const [search ,setSearch ]=useState(location.state.search);
+  console.log(data)
 useEffect(()=>{
 setSearch(location.state.search)
 },[location])
@@ -31,9 +27,9 @@ setSearch(location.state.search)
     </div> 
   )
 }
-export const query = graphql`query ($NameString: String){
+export const query = graphql`query Listings{
   
-   allStrapiListing(filter: { ForSale: {ne:false},Title:{eq:$NameString}}){
+   allStrapiListing(filter: { ForSale: {ne:false} }) {
     
      nodes {
     
@@ -58,7 +54,7 @@ export const query = graphql`query ($NameString: String){
        ShortDescription
        LongDescription
        ForSale
-      
+       SquareFootage
       
        LocationLatitude
        LocationLongitute

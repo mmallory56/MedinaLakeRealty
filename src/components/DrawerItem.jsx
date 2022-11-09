@@ -2,17 +2,32 @@ import React from 'react'
 import styled from "styled-components";
 import { Link } from "gatsby"
 const Item = styled(Link)`
-width:65%;
+width:auto;
   margin-top:20px;
   border-radius:.2rem ;
   color: white;
   transition: all 0.3s ease-in-out;
-  :hover {
-  background-color: #a7a7a712;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  
-  text-decoration: underline;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  text-align: right;
+  &:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #00768b;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
 }
+&:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
 `
 const DrawerItem = ({children,id="",search}) => {
   return (

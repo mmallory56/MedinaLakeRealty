@@ -18,7 +18,8 @@ const Bar = styled.div`
 
 const Item = styled(Link)`
   width:auto;
-  
+  display: inline-block;
+  position: relative;
   margin-right: 25px;
   color:white;
   text-decoration: none;
@@ -27,8 +28,27 @@ const Item = styled(Link)`
   
     font-size: smaller;
   margin-right:5px;
-  
+
 }
+
+&:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #00768b;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+&:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
+
 `
 const logoStyle={
   boxShadow:"2px 2px 5px black",
@@ -46,10 +66,10 @@ const LogoBar = () => {
         <Item to={"/Listing"}>Listings</Item>
       
       
-        <Item to={"/Buying"}>Buying?</Item>
+        <Item to={"/Buying"}>Buying</Item>
       
   
-        <Item to={"/Selling"}>Selling?</Item>
+        <Item to={"/Selling"}>Selling</Item>
      
     </Bar>
   )

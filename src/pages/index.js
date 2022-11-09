@@ -5,7 +5,7 @@ import Hero from "../components/Hero"
 import ListingSection from "../components/ListingSection"
 import LogoBar from "../components/LogoBar"
 import NavBar from "../components/NavBar"
-import ReviewSection from "../components/ReviewSection"
+
 import { graphql } from "gatsby"
 import { SEO } from "../components/seo"
 

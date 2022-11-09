@@ -44,8 +44,11 @@ useEffect(() => {
  
   
   if(search){
-    setSearchQuery(startSearch)
+    if(startSearch!=""){
+       setSearchQuery(startSearch)
     setSearchResult(search.search(startSearch))
+    }
+   else setSearchResult(data.nodes)
   }
   
   
