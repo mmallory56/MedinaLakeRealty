@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
+import SocialMedia from './SocialMedia';
 const FooterContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,350px));
@@ -9,6 +10,7 @@ const FooterContainer = styled.div`
   font-size: 1.5em;
   padding-top:450px;
   padding-bottom: 250px;
+  margin-top: 20px;
   gap:10px;
   background-image: url("/footerBackground.svg");
   background-color: #02a0a5;
@@ -74,7 +76,7 @@ const Footer = () => {
           
              <Item to={"/Listing"}>Listings</Item> 
          
-            
+            <SocialMedia></SocialMedia>
             
         </Section>
         <Section>
