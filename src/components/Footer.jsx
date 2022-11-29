@@ -64,7 +64,7 @@ const Footer = () => {
           
              <Item to={"/Listing"}>Listings</Item> 
          
-            <Item href={"https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0.pdf"}>Information about brokerage services</Item>
+            <Item href={"https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0.pdf"}>TREC Information about brokerage services</Item>
           
             
         </Section>
