@@ -56,11 +56,18 @@ const logoStyle={
   marginRight:"10px"
   
 }
+const Image = styled(StaticImage)`
+ 
+  box-shadow:2px 2px 5px black;
+  border-radius:9px;
+  margin-right:10px;
+  `
+
 const LogoBar = () => {
   return (
     <Bar>
       <Link to={"/"} href="/">
-        <StaticImage style={logoStyle} src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
+        <Image src="../images/MedinalakeLogo2.png" alt="Medina Lake Realty Logo"/>
       </Link>
       
         <Item to={"/Listing"} state={{search:""}}>Listings</Item>

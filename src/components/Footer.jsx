@@ -38,17 +38,19 @@ const FooterContainer = styled.div`
 const Section = styled.div`
 display: flex;
 align-items: center;
+margin-bottom: 150px;
 flex-direction: column;
     width:33%;
-    height:500px;
+    height:auto;
     padding-top: 600px;
     
     color:#ffff;
 `;
-const Item = styled.div`
-margin-top:90px;
+const Item = styled(Link)`
+margin-top:20px;
+text-align: center;
 color:white;
-font-size: xx-large;
+font-size: large;
 text-decoration-line: none;
 -moz-text-decoration-line:none;
 text-decoration: none !important;
@@ -57,20 +59,21 @@ const Footer = () => {
   return (
     <FooterContainer>
         <Section>
-          <Link to={"/About"}>
-            <Item>About</Item>
-            </Link>
-            <Link to={"/Listing"}>
-             <Item>Listings</Item> 
-            </Link>
-            
-            <Item>Item</Item>
+          
+            <Item to="/About">About</Item>
+          
+             <Item to={"/Listing"}>Listings</Item> 
+         
+            <Item href={"https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0.pdf"}>Information about brokerage services</Item>
           
             
         </Section>
         <Section>
-        <Item>Item</Item>
-            <Item>Item</Item>
+        <Item 
+        href="https://www.edwardsaquifer.net/medina.html#:~:text=Medina%20Lake%20was%20constructed%20between,Antonio%2C%20just%20outside%20Loop%201604.">
+          History of Medina Lake
+          </Item>
+          <Item href="https://www.facebook.com/MedinaLakeRealty/">Our Facebook </Item>
             <Item>Item</Item>
            
            

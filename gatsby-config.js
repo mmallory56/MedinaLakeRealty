@@ -36,6 +36,8 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
     },
+    
+    
     "gatsby-plugin-styled-components", 
     "gatsby-plugin-react-helmet", 
     "gatsby-plugin-sitemap",
