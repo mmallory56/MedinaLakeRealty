@@ -20,7 +20,7 @@ border-radius: 14px;
 const Title = styled.div`
 font-size: 50px;
 font-style: bold;
-
+text-align: center;
 
 `
 const ShortDescription = styled.div`

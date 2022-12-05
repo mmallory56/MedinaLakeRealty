@@ -9,7 +9,7 @@ display:flex;
 flex-direction: column;
     width:100%;
     height: auto;
-
+margin-top:2px;
 background: #F8F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 14px;
